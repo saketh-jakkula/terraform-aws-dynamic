@@ -57,7 +57,8 @@ resource "aws_iam_instance_profile" "ec2_instance_profile" {
 
 resource "aws_key_pair" "ec2_key" {
   key_name   = "cloud9_key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  # public_key = file("~/.ssh/id_rsa.pub")
+  public_key = var.key
 
 }
 
